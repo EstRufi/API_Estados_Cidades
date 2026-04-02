@@ -133,3 +133,12 @@ const getCidades = function(informarCidades) {
 
     return cidade
 }
+
+module.exports = {
+    getCapitalEstado,
+    getCapitalPais,
+    getCidades,
+    getDadosEstado,
+    getEstadosRegiao,
+    getListaDeEstados
+}
