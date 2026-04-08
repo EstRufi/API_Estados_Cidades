@@ -106,7 +106,7 @@ app.get("/v1/senai/estados/regiao/:regiao",function(request,response){
 //Retorna os  estados que foram capital do brasil
 app.get("/v1/senai/estados/capital/brasil", function(request, response){
     let capitalPais = estadosCidades.getCapitalPais()
-    response.json(200)
+    response.status(200)
     response.json(capitalPais)
     
 })
@@ -117,11 +117,11 @@ app.get("/v1/senai/cidades/estados/:uf", function(request,response){
     let cidadesEstados = estadosCidades.getCidades(sigla)
 
     if(cidadesEstados){
-        response.json(200)
+        response.status(200)
         response.json(cidadesEstados)
     }
     else{
-        response.json(404)
+        response.status(404)
         response.json({"mensage": "Ops você enviou uma sigla desconhecida"})
     }
 })
