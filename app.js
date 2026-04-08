@@ -89,8 +89,8 @@ app.get("/v1/senai/capital/estado/:uf", function(request,response){
 
 //Retorna os estados filtrando pela região
 app.get("/v1/senai/estados/regiao/:regiao",function(request,response){
-    let regiao = request.params.regiao
-    let estadosRegiao = estadosCidades.getEstadosRegiao(regiao)
+    let sigla = request.params.regiao
+    let estadosRegiao = estadosCidades.getEstadosRegiao(sigla)
 
     if(estadosRegiao){
         response.status(200)
@@ -149,7 +149,7 @@ app.get("/v1/senai/help", function(request,response){
             },
             
             {
-                "router4": "/v1/senai/estados/regial/sul",
+                "router4": "/v1/senai/estados/regiao/sul",
                 "description": "Retorna os estados filtrando pela região"
             },
 
